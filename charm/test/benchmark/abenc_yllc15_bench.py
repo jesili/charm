@@ -33,7 +33,7 @@ def run_keygen_encrypt_proxy_decrypt_decrypt_round_trip(policy_str):
     proxy_decrypt_exec_time = end_bench(group, "proxy_decrypt", n)
 
     start_bench(group)
-    recovered_key_elem = abe.decrypt(params, sku, intermediate_value)
+    recovered_key_elem = abe.decrypt(None, sku, intermediate_value)
     decrypt_exec_time = end_bench(group, "decrypt", n)
 
     assert random_key_elem == recovered_key_elem
